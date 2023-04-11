@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const notes = require('./db/db.json');
+const notes = require('./Develop/db/db.json');
 
 const app = express();
 
@@ -52,7 +52,7 @@ app.post('/api/notes', (req, res) => {
   const newNote = createNote(req.body, notes);
   res.json(newNote);
   console.log(newNote)
-});
+}); 
 
 
 app.listen(PORT, () =>
