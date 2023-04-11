@@ -48,7 +48,7 @@ function createNote(body, newArr) {
 }
 
 
-app.post('Develop\public\notes.html', (req, res) => {
+app.post('/api/notes', (req, res) => {
   const newNote = createNote(req.body, notes);
   res.json(newNote);
   console.log(newNote)
